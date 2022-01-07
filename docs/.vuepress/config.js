@@ -31,6 +31,12 @@ module.exports = {
       options: {
         margin: 16
       }
-    }
+    },
+
+    '@vuepress/search': {
+      searchMaxSuggestions: 10
+    },
+
+    '@vuepress/nprogress':{},
   }
 };
