@@ -10,7 +10,9 @@ CSGO工具箱： <https://github.com/Purple-CSGO/CSGO-Toolbox-Qt>
 
 ----
 
-请修改记事本字体为Consolas之类的等宽字体以获得最佳体验
+请修改记事本字体为Consolas之类的等宽字体以获得更好体验
+
+> 也可以前往[编辑器](https://cfg.upup.cool/category/editor.html)页面配置VSCode
 
 ![](/请修改记事本字体为Consolas之类的等宽字体.png)
 
@@ -69,15 +71,7 @@ CSGO工具箱： <https://github.com/Purple-CSGO/CSGO-Toolbox-Qt>
      
      - 第二行，如 SteamID3 [U:1:`146859713`] ，ID=`146859713`
 
-3. 修改 `auto.cfg` 中的参数
-   
-   - 可以把游戏设置成**窗口模式**对应着改
-   
-   - **准星、持枪参数**可到创意工坊地图导出
-   
-   - 或使用下文的方法
-
-4. //是"注释" 在它出现的那一行，之后的内容都不会被读取
+3. //是"注释" 在它出现的那一行，之后的内容都不会被读取
    
    ```
    这是指令;    //这是注释
@@ -89,6 +83,14 @@ CSGO工具箱： <https://github.com/Purple-CSGO/CSGO-Toolbox-Qt>
    //这是指令;    //这是注释
    ```
 
+4. 修改 `auto.cfg` 中的参数
+   
+   - 可以把游戏设置成**窗口模式**对应着改
+   
+   - **准星、持枪参数**可到创意工坊地图导出
+   
+   - 或使用下文的方法
+
 5. 修改完成后移动到CFG文件夹（步骤1），个人CFG文件夹仅该玩家使用，方便打包；游戏CFG所有本机账号共享，请自行取舍。
 
 ## 准星&持枪参数导出
@@ -96,12 +98,14 @@ CSGO工具箱： <https://github.com/Purple-CSGO/CSGO-Toolbox-Qt>
 分开使用，复制到控制台，即可得到对应参数。
 
 ```
-echo ;echo "==================== 准星参数 ====================";echo ;sv_max_allowed_developer 2;developer 2;con_filter_enable 1;con_filter_text cl_crosshair;host_writeconfig;
+echo ;echo "==================== 准星参数 ====================";echo ;sv_max_allowed_developer 2;developer 2;
+con_filter_enable 1;con_filter_text cl_crosshair;host_writeconfig;
 con_filter_text cl_fix;host_writeconfig;developer 0;con_filter_enable 0;
 ```
 
 ```
-echo ;echo "==================== 持枪参数 ====================";echo ;sv_max_allowed_developer 2;developer 2;con_filter_enable 1;con_filter_text viewmodel;host_writeconfig;
+echo ;echo "==================== 持枪参数 ====================";echo ;sv_max_allowed_developer 2;developer 2;
+con_filter_enable 1;con_filter_text viewmodel;host_writeconfig;
 con_filter_text cl_bob;host_writeconfig;developer 0;con_filter_enable 0;
 ```
 
@@ -131,6 +135,8 @@ apply_crosshair_code CSGO-cS6Fv-iBc8r-sroTA-4jyik-OYTSH
 | -refresh 240                                     | 刷新率 `240hz` 根据显示器调整    |
 | -w 1920 -h 1080                                  | 分辨率 `1920x1080` 根据偏好调整 |
 | -tickrate 128 +cl_cmdrate 128 +cl_updaterate 128 | 128tick                |
+
+> CFG内容的最后有 `host_writeconfig` 才能在启动时写入设置
 
 ## 捐赠
 
