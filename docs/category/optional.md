@@ -56,11 +56,11 @@ cl_fixedcrosshairgap "3"
 
 ```
 //────────────────   鼠标中键切换滚轮跳和切枪(声音提示)   ──────────────────
-bind mouse3 bhop;   		// "mouse3" 鼠标中键 可修改
+bind mouse3 bhop;           // "mouse3" 鼠标中键 可修改
 alias bhop bhop_on;
 alias bhop_on "alias bhop bhop_off;bind mwheelup +jump;bind mwheeldown +jump;playvol ui/beepclear 0.8;echo ------> behop_on <------";
 alias bhop_off "alias bhop bhop_on;bind mwheelup invprev;bind mwheeldown invnext;playvol ui/weapon_cant_buy 0.8;echo ------> behop_off <------";
-behop_on			// 默认中键滚轮跳  on改成off->默认中键切枪
+behop_on            // 默认中键滚轮跳  on改成off->默认中键切枪
 ```
 
 ## 一键切换灵敏度
@@ -76,7 +76,7 @@ alias sens_l "alias sens sens_h;sensitivity 2.41"
 ## 开关显示网络参数
 
 ```
-bind tab "+showscores;shownetg";	//Tab键开关显示网络参数 !有延迟
+bind tab "+showscores;shownetg";    //Tab键开关显示网络参数 !有延迟
 alias shownetg shownetg_on
 alias shownetg_on "alias shownetg shownetg_off;net_graph 1"
 alias shownetg_off "alias shownetg shownetg_on;net_graph 0"
@@ -101,7 +101,7 @@ bind v +bgwb
 //──────────────────    转圈圈（沙鹰，爪刀，蝴蝶刀等等）   ───────────────
 alias +fr "+reload;" 
 alias -fr "-reload;+lookatweapon"
-bind r "+fr" 	//R键一键fr
+bind r "+fr"     //R键一键fr
 ```
 
 ## 切刀并检视
@@ -119,8 +119,8 @@ bind "3" "+qdjs"
 
 ```
 //───────────────────    屏幕↖显示伤害(声音提示)   ──────────────────────
-bind F8 display;		// F8键  可修改   	【粉色 FF25FFFF 黄色 FFD700FF 绿色 008000FF 红色 AF0000FF】 <可替换>
-alias display display_on;	//		【浅蓝 00FFFFFF 紫色 8A2BE2FF 橙色 FF7F50FF 白色 FFFFFFFF】        ↓
+bind F8 display;        // F8键  可修改       【粉色 FF25FFFF 黄色 FFD700FF 绿色 008000FF 红色 AF0000FF】 <可替换>
+alias display display_on;    //        【浅蓝 00FFFFFF 紫色 8A2BE2FF 橙色 FF7F50FF 白色 FFFFFFFF】        ↓
 alias display_on "alias display display_off;con_filter_enable 2;developer 1;playvol ui/beepclear 0.8;log_color General 00FFFFFF;con_filter_text_out Player:";
 alias display_off "alias display display_on;con_filter_enable 0;developer 0;playvol ui/weapon_cant_buy 0.8;log_color General FFFFFFFF";
 con_filter_text "Damage ";
@@ -148,17 +148,17 @@ bind "w" "+forward;swaphud";
 bind "a" "+moveleft;swaphud";
 bind "s" "+back;swaphud";
 bind "d" "+moveright;swaphud";
-alias	"swaphud"	"hud0";
-alias	"hud0"	"cl_hud_color 0;alias swaphud hud1";
-alias	"hud1"	"cl_hud_color 1;alias swaphud hud2";
-alias	"hud2"	"cl_hud_color 2;alias swaphud hud3";
-alias	"hud3"	"cl_hud_color 3;alias swaphud hud4";
-alias	"hud4"	"cl_hud_color 4;alias swaphud hud5";
-alias	"hud5"	"cl_hud_color 5;alias swaphud hud6";
-alias	"hud6"	"cl_hud_color 6;alias swaphud hud7";
-alias	"hud7"	"cl_hud_color 7;alias swaphud hud8";
-alias	"hud8"	"cl_hud_color 8;alias swaphud hud9";
-alias	"hud9"	"cl_hud_color 9;alias swaphud hud0";
+alias    "swaphud"    "hud0";
+alias    "hud0"    "cl_hud_color 0;alias swaphud hud1";
+alias    "hud1"    "cl_hud_color 1;alias swaphud hud2";
+alias    "hud2"    "cl_hud_color 2;alias swaphud hud3";
+alias    "hud3"    "cl_hud_color 3;alias swaphud hud4";
+alias    "hud4"    "cl_hud_color 4;alias swaphud hud5";
+alias    "hud5"    "cl_hud_color 5;alias swaphud hud6";
+alias    "hud6"    "cl_hud_color 6;alias swaphud hud7";
+alias    "hud7"    "cl_hud_color 7;alias swaphud hud8";
+alias    "hud8"    "cl_hud_color 8;alias swaphud hud9";
+alias    "hud9"    "cl_hud_color 9;alias swaphud hud0";
 ```
 
 ---
@@ -187,7 +187,7 @@ alias "black"  "cl_crosshaircolor 5;cl_crosshaircolor_b 0;cl_crosshaircolor_r 0;
 ## 开关式投掷准星
 
 ```
-bind  "mouse4"   "xh";		// "mouse4" 后侧键 可修改
+bind  "mouse4"   "xh";        // "mouse4" 后侧键 可修改
 alias "xh"       "xh_throw"
 alias "xh_throw" "alias xh xh_norm;exec crosshair_throw.cfg";
 alias "xh_norm"  "alias xh xh_throw;exec crosshair.cfg";
@@ -198,7 +198,7 @@ alias "xh_norm"  "alias xh xh_throw;exec crosshair.cfg";
 ## 开放式麦克风
 
 ```
-bind  mouse5  "mic";	// "mouse5" 前侧键 可修改
+bind  mouse5  "mic";    // "mouse5" 前侧键 可修改
 alias mic     "mic_on";
 alias mic_on  "alias mic mic_off;+voicerecord";
 alias mic_off "alias mic mic_on;-voicerecord";
@@ -213,12 +213,12 @@ alias mic_off "alias mic mic_on;-voicerecord";
 
 ```
 //───────────────────     快速切换道具(未开启)    ────────────────────────
-//bind z "use weapon_knife;use weapon_smokegrenade;xjumpthrow";			//烟
-//bind x "use weapon_knife;use weapon_flashbang;xjumpthrow";			//闪
-//bind c "use weapon_knife;use weapon_hegrenade;xjumpthrow";			//雷
-//bind v "use weapon_knife;use weapon_molotov;use weapon_incgrenade;xjumpthrow";	//火
+//bind z "use weapon_knife;use weapon_smokegrenade;xjumpthrow";            //烟
+//bind x "use weapon_knife;use weapon_flashbang;xjumpthrow";            //闪
+//bind c "use weapon_knife;use weapon_hegrenade;xjumpthrow";            //雷
+//bind v "use weapon_knife;use weapon_molotov;use weapon_incgrenade;xjumpthrow";    //火
 //──────────    防误触跳投+自动投掷物准星+个性化左右手(声音提示)    ────────────
-bind  Capslock +jumpthrow;		// "Capslock"键跳投 [可修改]
+bind  Capslock +jumpthrow;        // "Capslock"键跳投 [可修改]
 bind  mouse1 +atk;
 bind  mouse2 +atk2;
 alias +jumpthrow;
@@ -237,13 +237,13 @@ alias ack2_2 "exec crosshair;alias +jumpthrow;alias -ack2;alias +ack2"
 alias xjumpthrow "alias +ack ack_1;alias +ack2 ack2_1";
 alias xjumpthrow_off "alias +ack;alias +ack2;exec crosshair"
 //──────────────────       个性化左右手(声音提示)       ─────────────────────
-bind  v    "xchange"			// "v"键 切换档位 [可修改]
-alias left "cl_righthand 0"		// s1=数字1|主武器    s2=数字2|副武器    s3=数字3|刀    s4=数字4|道具    s5=数字5|炸弹
-alias right "cl_righthand 1"		// left=左手 right=右手
-alias xchange xchange_on		// 开启档<1左手2345右手>   关闭档<12345右手>   [可修改]
+bind  v    "xchange"            // "v"键 切换档位 [可修改]
+alias left "cl_righthand 0"        // s1=数字1|主武器    s2=数字2|副武器    s3=数字3|刀    s4=数字4|道具    s5=数字5|炸弹
+alias right "cl_righthand 1"        // left=左手 right=右手
+alias xchange xchange_on        // 开启档<1左手2345右手>   关闭档<12345右手>   [可修改]
 alias xchange_on "alias xchange xchange_off;alias s1 left    ;alias s2 right  ;alias s3 right  ;alias s4 right  ;alias s5 right  ;playvol ui/beepclear 0.8"//←开启档设置
 alias xchange_off "alias xchange xchange_on;alias s1 right  ;alias s2 right  ;alias s3 right  ;alias s4 right  ;alias s5 right  ;playvol ui/weapon_cant_buy 0.8"//←关闭档设置
-xchange_off;	// 默认关闭档 [可修改]
+xchange_off;    // 默认关闭档 [可修改]
 bind 1 "slot1;s1;xjumpthrow_off"
 bind 2 "slot2;s2;xjumpthrow_off"
 bind 3 "slot3;s3;xjumpthrow_off"
@@ -256,7 +256,7 @@ bind 5 "slot5;s5;xjumpthrow_off"
 
 ```
 //──────────────────    防误触跳投+自动投掷物准星    ────────────────────
-bind  Capslock +jumpthrow;		// "Capslock"键跳投 [可修改]
+bind  Capslock +jumpthrow;        // "Capslock"键跳投 [可修改]
 bind  mouse1   +atk;
 bind  mouse2   +atk2;
 alias +jumpthrow;
@@ -312,17 +312,17 @@ bind  mouse2 +atk2;
 
 ```
 //───────────────────   个性化左右手(声音提示)   ────────────────────────
-bind  v xchange			// "v"键 切换档位 [可修改]
-alias left "cl_righthand 0"		// s1=数字1|主武器    s2=数字2|副武器    s3=数字3|刀    s4=数字4|道具    s5=数字5|炸弹
-alias right "cl_righthand 1"		// left=左手 right=右手
-alias xchange xchange_on		// 开启档<1左手2345右手>   关闭档<12345右手>   [可修改]
+bind  v xchange            // "v"键 切换档位 [可修改]
+alias left "cl_righthand 0"        // s1=数字1|主武器    s2=数字2|副武器    s3=数字3|刀    s4=数字4|道具    s5=数字5|炸弹
+alias right "cl_righthand 1"        // left=左手 right=右手
+alias xchange xchange_on        // 开启档<1左手2345右手>   关闭档<12345右手>   [可修改]
 alias xchange_on "alias xchange xchange_off;alias s1 left    ;alias s2 right  ;alias s3 right  ;alias s4 right  ;alias s5 right  ;playvol ui/beepclear 0.8"//←开启档设置
 alias xchange_off "alias xchange xchange_on;alias s1 right  ;alias s2 right  ;alias s3 right  ;alias s4 right  ;alias s5 right  ;playvol ui/weapon_cant_buy 0.8"//←关闭档设置
-xchange_off;	// 默认关闭档 [可修改]
+xchange_off;    // 默认关闭档 [可修改]
 bind  1 "slot1;s1"
 bind  2 "slot2;s2"
 bind  3 "slot3;s3"
-bind  4 "slot4;s4"	  
+bind  4 "slot4;s4"      
 bind  5 "slot5;s5"
 //═════════════════════════════════════════════════════════════
 ```
@@ -331,10 +331,10 @@ bind  5 "slot5;s5"
 
 ```
 //───────────────────     快速切换道具(未开启)    ────────────────────────
-//bind z "use weapon_knife;use weapon_smokegrenade";			//烟
-//bind x "use weapon_knife;use weapon_flashbang";			//闪
-//bind c "use weapon_knife;use weapon_hegrenade";			//雷
-//bind v "use weapon_knife;use weapon_molotov;use weapon_incgrenade";	//火
+//bind z "use weapon_knife;use weapon_smokegrenade";            //烟
+//bind x "use weapon_knife;use weapon_flashbang";            //闪
+//bind c "use weapon_knife;use weapon_hegrenade";            //雷
+//bind v "use weapon_knife;use weapon_molotov;use weapon_incgrenade";    //火
 //═════════════════════════════════════════════════════════════
 ```
 
@@ -342,7 +342,7 @@ bind  5 "slot5;s5"
 
 ```
 //──────────    防误触跳投+自动投掷物准星+个性化左右手(声音提示)    ────────────
-bind  Capslock +jumpthrow;		// "Capslock"键跳投 [可修改]
+bind  Capslock +jumpthrow;        // "Capslock"键跳投 [可修改]
 bind  mouse1 +atk;
 bind  mouse2 +atk2;
 alias +jumpthrow;
@@ -361,13 +361,13 @@ alias ack2_2 "exec crosshair;alias +jumpthrow;alias -ack2;alias +ack2"
 alias xjumpthrow "alias +ack ack_1;alias +ack2 ack2_1";
 alias xjumpthrow_off "alias +ack;alias +ack2;exec crosshair"
 //──────────────────       个性化左右手(声音提示)       ─────────────────────
-bind v xchange			// "v"键 切换档位 [可修改]
-alias left "cl_righthand 0"		// s1=数字1|主武器    s2=数字2|副武器    s3=数字3|刀    s4=数字4|道具    s5=数字5|炸弹
-alias right "cl_righthand 1"		// left=左手 right=右手
-alias xchange xchange_on		// 开启档<1左手2345右手>   关闭档<12345右手>   [可修改]
+bind v xchange            // "v"键 切换档位 [可修改]
+alias left "cl_righthand 0"        // s1=数字1|主武器    s2=数字2|副武器    s3=数字3|刀    s4=数字4|道具    s5=数字5|炸弹
+alias right "cl_righthand 1"        // left=左手 right=右手
+alias xchange xchange_on        // 开启档<1左手2345右手>   关闭档<12345右手>   [可修改]
 alias xchange_on "alias xchange xchange_off;alias s1 left    ;alias s2 right  ;alias s3 right  ;alias s4 right  ;alias s5 right  ;playvol ui/beepclear 0.8"//←开启档设置
 alias xchange_off "alias xchange xchange_on;alias s1 right  ;alias s2 right  ;alias s3 right  ;alias s4 right  ;alias s5 right  ;playvol ui/weapon_cant_buy 0.8"//←关闭档设置
-xchange_off;	// 默认关闭档 [可修改]
+xchange_off;    // 默认关闭档 [可修改]
 bind 1 "slot1;s1;xjumpthrow_off"
 bind 2 "slot2;s2;xjumpthrow_off"
 bind 3 "slot3;s3;xjumpthrow_off"
@@ -380,12 +380,12 @@ bind 5 "slot5;s5;xjumpthrow_off"
 
 ```
 //───────────────────     快速切换道具(未开启)    ────────────────────────
-//bind z "use weapon_knife;use weapon_smokegrenade;xjumpthrow";			//烟
-//bind x "use weapon_knife;use weapon_flashbang;xjumpthrow";			//闪
-//bind c "use weapon_knife;use weapon_hegrenade;xjumpthrow";			//雷
-//bind v "use weapon_knife;use weapon_molotov;use weapon_incgrenade;xjumpthrow";	//火
+//bind z "use weapon_knife;use weapon_smokegrenade;xjumpthrow";            //烟
+//bind x "use weapon_knife;use weapon_flashbang;xjumpthrow";            //闪
+//bind c "use weapon_knife;use weapon_hegrenade;xjumpthrow";            //雷
+//bind v "use weapon_knife;use weapon_molotov;use weapon_incgrenade;xjumpthrow";    //火
 //──────────────────    防误触跳投+自动投掷物准星    ─────────────────────
-bind  Capslock +jumpthrow;		// "Capslock"键跳投 [可修改]
+bind  Capslock +jumpthrow;        // "Capslock"键跳投 [可修改]
 bind  mouse1 +atk;
 bind  mouse2 +atk2;
 alias +jumpthrow;
