@@ -5,8 +5,8 @@
 - 需要在这个cfg的结尾加上 `host_writeconfig;`
 
 - 启动项 `+exec xxx.cfg` 是不是忘了 `+` 或者忘了用空格隔开？
-
-    > `xxx` : CFG名称
+  
+  > `xxx` : CFG名称
 
 ## 为什么控制台经常弹出unknown command？
 
